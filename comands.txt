@@ -1,0 +1,12 @@
+
+npm init
+npm install vue
+npm install -D webpack webpack-dev-server webpack-cli @babel/preset-env babel-loader style-loader css-loader vue-loader html-webpack-plugin
+
+npm ci -для развертки приложения с зависимости на новом месте
+
+babel.config.js саздаем файл конфигурация для babel
+
+src папка с исх. кодом  
+
+webpack.config.js саздаем файл конфигурация для webpack
