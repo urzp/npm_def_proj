@@ -10,3 +10,6 @@ babel.config.js саздаем файл конфигурация для babel
 src папка с исх. кодом  
 
 webpack.config.js саздаем файл конфигурация для webpack
+
+.\node_modules\.bin\webpack   запускать упаковку проекта
+npx webpack
