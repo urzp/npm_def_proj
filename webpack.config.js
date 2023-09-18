@@ -5,7 +5,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
     mode: 'development',
 
-    entry: path.resolve(__dirname, 'scr/main.js'),
+    entry: path.resolve(__dirname, 'src/main.js'),
 
     //выход
     output:{
@@ -14,7 +14,7 @@ module.exports = {
     },
 
     // работа с модулями
-    modules:{
+    module:{
         rules:[
             {
                 test: /\.js$/,
@@ -37,7 +37,7 @@ module.exports = {
     // работа с плагинами
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'scr/index.html'),
+            template: path.resolve(__dirname, 'src/index.html'),
         }),
         new VueLoaderPlugin()
     ]
