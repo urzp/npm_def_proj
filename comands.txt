@@ -13,3 +13,18 @@ webpack.config.js саздаем файл конфигурация для webpac
 
 .\node_modules\.bin\webpack   запускать упаковку проекта
 npx webpack
+npx webpack --progress
+npx webpack --progress --mode development / prodation --watch (для остлеживания изменений в проекте)
+
+package.json  настройка
+"scripts": {
+    "build": "npx webpack --progress --mode development",
+}
+
+теперь вместо npx webpack -> npm run build
+
+
+npx serve dist запуск приложения 
+
+npx webpack serve --mode=development  запускает сборку с режимом whatch
+

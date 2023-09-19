@@ -10,7 +10,26 @@ module.exports = {
     //выход
     output:{
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+       // filename: 'bundle.[contenthash:6].js', //сборка в общий файл, [contenthash:6] изменяем имя чтобы в браузере контент обновлялся после обновления проекта
+       filename: '[name].[contenthash:6].js', // сборка по подулям
+        clean: true, //удалять мусор в деректории от старых сборок
+    },
+
+    // для сборки файлов в отдельные модули
+
+    optimization: {
+        //сборка по частям
+        splitChunks: {
+            cacheGroups:{
+                //выделяем сторонние библиотеки в отдельные модули
+                vendors: {
+                    name: 'vendors',
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10,
+                    chunks: 'initial',
+                }
+            }
+        }
     },
 
     // работа с модулями
@@ -31,6 +50,22 @@ module.exports = {
                 exclude: /node_modules/,
                 use: 'vue-loader',
             },
+            {
+                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                exclude: /node_modules/,
+                type: 'asset',
+                generator:{
+                    filename: 'images/[name].[contenthash:6][ext]',
+                }
+            },
+            {
+                test: /\.(woff2&|eot|ttf|oft)$/i,
+                exclude: /node_modules/,
+                type: 'asset',
+                generator:{
+                    filename: 'fonts/[name].[contenthash:6][ext]',
+                }
+            }
         ]
     },
 

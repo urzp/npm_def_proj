@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack --progress --mode development",
+    "serve": "npx webpack serve --mode=development"
   },
   "author": "",
   "license": "ISC",
