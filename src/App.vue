@@ -1,15 +1,15 @@
 <template>
-    <div class="main_div">{{ $options.name }}</div>
+    <div>
+        <UiText  :text="'Some text'" />
+    </div>
 </template>
 
 <script>
+    import UiText from './UiText.vue'
+
     export default{
-        name: 'myAppName',
-        data(){
-            return {
-                message: 'myAppMessage'
-            }
-        }
+        name: 'AppName',
+        components: { UiText },
     };      
 </script>
 
