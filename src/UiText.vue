@@ -21,7 +21,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    .text{
+        background-color: #7edf8e;
+    }
     .root{
         font-size: 30px;
         font-style: italic;

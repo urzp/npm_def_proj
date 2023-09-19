@@ -1,16 +1,22 @@
 <template>
     <button class="button" type="button">
-        <slot/>
+        <UiText class="text" text="Some text" color="red"></UiText>
+        <!-- <slot/> -->
     </button>
 </template>
 
 <script>
+import UiText from './UiText.vue'
 export default {
-    name: 'UiButton'
+    name: 'UiButton',
+    components: { UiText },
 }
 </script>
 
 <style scoped>
+    .text{
+        opacity: 0.5;
+    }
     .button{
         margin: 10px 20px;
         display: inline-block;
