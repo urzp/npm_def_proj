@@ -14,8 +14,12 @@ export default {
 </script>
 
 <style scoped>
-    .text{
-        opacity: 0.5;
+    .button :deep(.inside){
+        font-size: 60px ;
+    }
+
+    .button :slotted(*){
+        font-size: 90px;
     }
     .button{
         margin: 10px 20px;
