@@ -1,8 +1,8 @@
 <template>
     <div class="main_div">
         <!-- <UiText  :text="'Some text'" color="red" /> -->
-        <UiButton>Text</UiButton>
-        <button class="button">HTML button</button>
+        <UiButton><UiText  :text="'Some text'" color="red" /></UiButton>
+        <!-- <button class="button">HTML button</button> -->
     </div>
 </template>
 

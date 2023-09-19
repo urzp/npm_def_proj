@@ -1,7 +1,7 @@
 <template>
     <button class="button" type="button">
-        <UiText class="text" text="Some text" color="red"></UiText>
-        <!-- <slot/> -->
+        <!-- <UiText class="text" text="Some text" color="red"></UiText> -->
+        <slot/>
     </button>
 </template>
 
@@ -14,12 +14,12 @@ export default {
 </script>
 
 <style scoped>
-    .button :deep(.inside){
+    /* .button :deep(.inside){
         font-size: 60px ;
-    }
+    }  */
 
-    .button :slotted(*){
-        font-size: 90px;
+    :slotted(.root){
+        display: none;
     }
     .button{
         margin: 10px 20px;
