@@ -28,3 +28,4 @@ npx serve dist запуск приложения
 
 npx webpack serve --mode=development  запускает сборку с режимом whatch
 
+$vm.proxy.$options в консоле. Перед этим выбрать во вклвдке Vue элемент

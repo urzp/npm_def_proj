@@ -1,22 +1,23 @@
 <template>
-    <div>
-        <UiText  :text="'Some text'" />
+    <div class="main_div">
+        <!-- <UiText  :text="'Some text'" color="red" /> -->
+        <UiButton>Text</UiButton>
+        <button class="button">HTML button</button>
     </div>
 </template>
 
 <script>
+    import UiButton from './UiButton.vue';
     import UiText from './UiText.vue'
 
     export default{
         name: 'AppName',
-        components: { UiText },
+        components: { UiText, UiButton },
     };      
 </script>
 
 <style>
     .main_div{
-        height: 300px;
-        width: 300px;
-        background-image: url(./assets/img/myImg.png) ;
+        margin: 50px;
     }
 </style>

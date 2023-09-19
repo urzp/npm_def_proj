@@ -1,6 +1,6 @@
 <template>
     <span class="root">
-       Text =  <span class="inside">{{ text }}</span>
+       Text =  <span class="inside" >{{ text }}</span>
     </span>
 </template>
 
@@ -22,6 +22,12 @@ export default {
 </script>
 
 <style>
-
+    .root{
+        font-size: 30px;
+        font-style: italic;
+    }
+    .inside{
+        color: v-bind(color);
+    }
 </style>
 

@@ -10,8 +10,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .button{
+        margin: 10px 20px;
         display: inline-block;
         padding: 10px 24px;
         font-weight: 700;
@@ -19,15 +20,18 @@ export default {
         line-height: 28px;
         color: #4c6bb6;
         text-align: center;
-        border: 4px solid #4c6bb6;
+        border: 1px solid #4c6bb6;
+        border-radius: 5px;
         transition: 0.2s all;
         outline: none;
         box-shadow: none;
         background-color: #fff;
         cursor: pointer;
+        
     }
 
     .button:hover{
         border-color: #b8c5e2;
+        background-color: #b8c5e2;
     }
 </style>
