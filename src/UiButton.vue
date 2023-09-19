@@ -1,5 +1,5 @@
 <template>
-    <button class="button" type="button">
+    <button :class="$style.button" type="button">
         <!-- <UiText class="text" text="Some text" color="red"></UiText> -->
         <slot/>
     </button>
@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style module>
     /* .button :deep(.inside){
         font-size: 60px ;
     }  */
